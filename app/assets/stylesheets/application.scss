@@ -13,3 +13,6 @@
  *= require_tree .
  *= require_self
  */
+@import "bootstrap/scss/bootstrap"; // from the node_modules
+@import "font-awesome-sprockets";
+@import "font-awesome";
