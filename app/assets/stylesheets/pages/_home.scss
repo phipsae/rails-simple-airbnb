@@ -1,7 +1,4 @@
-// Place all the styles related to the flats controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
-
+// Specific CSS for your home-page
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -17,10 +14,11 @@
   border: 1px solid rgb(230,230,230);
 }
 
-.card img {
-  width: 100%;
+.flat-card-image {
+  height: 180px;
+  background-position: center;
+  background-size: cover;
 }
-
 .info {
   background-color: rgb(240, 233, 233);
   padding: 10px;
@@ -29,4 +27,8 @@
 
 .action {
   padding: 0px 10px;
+}
+
+.remove {
+  color: red;
 }

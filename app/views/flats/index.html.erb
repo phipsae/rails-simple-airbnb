@@ -1,19 +1,25 @@
-
 <div class="cards">
   <% @flats.each do |flat| %>
     <div class="row">
       <div class="card">
-        <img src='https://images.unsplash.com/photo-1494526585095-c41746248156?w=1200' alt="">
+        <div class="flat-card-image" style="background-image: url('<%= flat.picture_url %>')"></div>
         <div class="info">
           <h4><%= flat.name %></h4>
           <p><%= flat.address %></p>
           <p>
             <i class="fas fa-user-friends"></i><strong><%= flat.number_of_guests %>
-            &nbsp;&nbsp;</strong> <strong><i class="fas fa-euro-sign"></i><%= flat.price_per_night %></strong>
+            &nbsp;&nbsp;
+            </strong> <strong><i class="fas fa-euro-sign"></i><%= flat.price_per_night %></strong>
           </p>
         </div>
         <div class="action">
-          <p> <%= link_to "More info", flat_path(flat) %>  Edit Remove</p>
+          <p>
+            <%= link_to "More info", flat_path(flat) %>
+            <%= link_to "Edit", edit_flat_path(flat), class: 'ml-3 text-warning' %>
+            <span class='ml-3 text-danger'>
+              <%= link_to "Remove", flat_path(flat), method: :delete, data: { confirm: "Are you sure you want delete #{flat.name}?"}, class: 'ml-3 text-danger' %>
+            </span>
+            </p>
         </div>
       </div>
     </div>
